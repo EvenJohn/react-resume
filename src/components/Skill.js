@@ -18,7 +18,7 @@ class Skill extends React.Component {
                     <div className={styles.divide_line}>
                     </div>
                 </Row>
-                <ul>
+                <ul className={styles.mod_ul}>
                     {
                         Info.skills.map((item, index) => {
                             return <li key={index}>{item.txt}</li>

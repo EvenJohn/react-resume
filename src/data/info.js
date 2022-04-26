@@ -31,11 +31,24 @@ const Info = {
     }],
     // 项目经历
     projects: [{
-        name: '',
-        role: '',
-        des: '',
+        name: '某省测绘科学技术研究院动态专题制图系统',
+        role: '项目负责人',
+        des: '受某省测绘科学技术研究院所托，基于某市地理公共服务平台建设需求，使用SpringBoot + mybatis + redis' +
+            'postgresql + vue + leaflet + linux，开发在线地图制图平台。',
         responsibilities: [{
-            des: ''
+            des: '负责整个项目的对接工作，项目整体功能、进度把握'
+        },{
+            des: '使用springboot + mybatis + postgresql实现实现地图制图数据、地图服务数据、地图图标数据的增删改查，以及' +
+                '实现了用户上传表格生成统计图表等功能'
+        },{
+            des: '使用shiro和jwt实现了用户权限管理'
+        },{
+            des: '使用redis实现了数据缓存，以及用户验证，用户账号锁定等功能'
+        },{
+            des: '使用vue +ElementUI + leaflet实现了用户空间（个人信息、访问收藏统计）、地图制作（统计地图、分级地图）、' +
+                '地图附图（Echarts图表、文字、图片等）、地图打印等功能'
+        },{
+            des: '使用以linux为核心的国产化系统 + tomcat + nginx部署项目服务'
         }]
     }],
     // 教育经历
