@@ -18,7 +18,7 @@ class SchoolExperience extends React.Component {
                     <div className={styles.divide_line}>
                     </div>
                 </Row>
-                <ul>
+                <ul className={styles.mod_ul}>
                     {
                         Info.schoolExperiences.map((item, index) => {
                             return <li key={index} className={styles.font_border}>{item.des}</li>

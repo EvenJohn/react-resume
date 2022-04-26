@@ -18,7 +18,7 @@ class Others extends React.Component {
                     <div className={styles.divide_line}>
                     </div>
                 </Row>
-                <ul>
+                <ul className={styles.mod_ul}>
                     {
                         Info.others.map((item, index) => {
                             return <li key={index}><span className={styles.font_border}>{item.label + '：'}</span>{item.des}</li>
