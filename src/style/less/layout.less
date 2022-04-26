@@ -1,0 +1,85 @@
+.layout{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background: beige;
+  .content{
+    width: 794px;
+    height: 1123px;
+    background-color: beige;
+    padding: 10px 5rem;
+  }
+}
+
+.font_border{
+  font-weight: bolder;
+}
+
+.ed_box{
+  overflow: hidden;
+  .ed_box_left{
+    .font_border;
+    float:left;
+    width:50%;
+  }
+  .ed_box_right{
+    float:left;
+    width:50%;
+    text-align: right;
+  }
+  &::after{
+    display: block;
+    content:'';
+    height: 0;
+    visibility: hidden;
+    clear: both;
+  }
+}
+
+.divide{
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 5px 0px;
+  align-items: center;
+  div:not(:first-child){
+    margin-left:1rem;
+  }
+  .divide_line{
+    flex-grow:1;
+    height:1px;
+    background: gray;
+  }
+}
+
+.divide_icon_box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  background-color: black;
+  font-size: 1.3rem;
+  color:white;
+}
+// 打印样式
+@media print {
+  @page{
+    size: A4;
+    margin: 0;
+  }
+
+  .layout{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .content{
+      width: 794px;
+      height: 1123px;
+      background-color: white;
+      padding: 10px 5rem;
+    }
+  }
+}
