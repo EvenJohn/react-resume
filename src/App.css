@@ -1,12 +1,18 @@
 /* 引入ant design样式 */
 @import '~antd/dist/antd.css';
+
 html{
     font-size:10px;
-
-
 }
+
 body{
     font-family:  "Microsoft YaHei";
+}
+
+@media print{
+  .ant-drawer {
+    display: none!important;
+  }
 }
 
 /*.App {*/

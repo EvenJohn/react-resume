@@ -1,7 +1,8 @@
 import { createFromIconfontCN } from '@ant-design/icons'
 
 const Iconfont = createFromIconfontCN({
-    scriptUrl: './font/iconfont.js'
+    // 不能加‘./’，否则是相对路径
+    scriptUrl: '/font/iconfont.js'
 })
 
 export default Iconfont

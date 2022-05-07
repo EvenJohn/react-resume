@@ -17,3 +17,29 @@
   }
 }
 
+.flex_default{
+  display: flex;
+  justify-content: center;
+}
+
+.baseInfo_box{
+  position: relative;
+  .flex_default;
+
+  .left{
+    .flex_default;
+    flex-basis: 150px;
+  }
+
+  .center{
+    flex-grow: 1;
+    max-width: 394px;
+  }
+
+  .right{
+    .flex_default;
+    flex-basis: 150px;
+  }
+
+}
+

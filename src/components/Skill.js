@@ -1,34 +1,44 @@
-import React from 'react'
-import {Row, Col, Divider} from 'antd'
-import Info from '../data/info'
-import Iconfont from './Iconfont'
+import React, { Component } from 'react'
+import { EditOutlined} from '@ant-design/icons'
+import ReDivider from './common/ReDivider'
 import styles from '../style/less/layout.less'
+import { connect } from 'react-redux'
 
-class Skill extends React.Component {
+class Skill extends Component {
     render() {
+        const skills = this.props.skills
+
         return (
             <>
-                <Row className={styles.divide}>
-                    <div className={styles.divide_icon_box}>
-                        <Iconfont type="icon-gongju-tool"  theme="filled"/>
+                <ReDivider title="技术能力" type="icon-gongju-tool" />
+                <div className={styles.section_box}>
+                    <ul className={styles.mod_ul}>
+                        {
+                            skills.map((item, index) => {
+                                return <li key={index}>{item.txt}</li>
+                            })
+                        }
+                    </ul>
+                    <div className={styles.content_edit_box}>
+                        <EditOutlined onClick={this.props.showDrawer('Skill','技术能力')}/>
                     </div>
-                    <div>
-                        教育经历
-                    </div>
-                    <div className={styles.divide_line}>
-                    </div>
-                </Row>
-                <ul className={styles.mod_ul}>
-                    {
-                        Info.skills.map((item, index) => {
-                            return <li key={index}>{item.txt}</li>
-                        })
-                    }
-                </ul>
+                </div>
             </>
         )
     }
 }
 
 
-export default Skill
+const mapStateToProps = (state) => {
+    return {skills:state.skills}
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+
+    }
+}
+
+const SkillContainer = connect(mapStateToProps,mapDispatchToProps)(Skill)
+
+export default SkillContainer

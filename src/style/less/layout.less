@@ -1,58 +1,72 @@
-.layout{
-  width: 100vw;
+.layout {
+  width: 100%;
+  min-width: 794px;
   display: flex;
   justify-content: center;
   align-items: center;
-  //background: beige;
-  .content{
+
+  .content {
     width: 794px;
-    height: 1123px;
-    background-color: beige;
-    padding: 10px 5rem;
+    min-height: 1123px;
+    background-color: white;
+    padding: 15px 5rem;
   }
 }
 
-.font_border{
+.font_border {
   font-weight: bolder;
 }
 
-.ed_box{
+.ed_box {
   overflow: hidden;
-  .ed_box_left{
-    .font_border;
-    float:left;
-    width:50%;
+
+  .ed_box_left {
+    float: left;
+    width: 50%;
   }
-  .ed_box_right{
-    float:left;
-    width:50%;
+
+  .ed_box_right {
+    float: left;
+    width: 50%;
     text-align: right;
   }
-  &::after{
+
+  &::after {
     display: block;
-    content:'';
+    content: '';
     height: 0;
     visibility: hidden;
     clear: both;
   }
 }
 
-.divide{
+.section_box {
+  position: relative;
+
+  &:hover {
+    opacity: 0.8;
+    // background: rgba(100,100,100,0.8);
+  }
+}
+
+.divide {
   font-size: 2rem;
   font-weight: bolder;
   margin: 5px 0px;
   align-items: center;
-  div:not(:first-child){
-    margin-left:1rem;
+
+  div:not(:first-child) {
+    margin-left: 1rem;
   }
-  .divide_line{
-    flex-grow:1;
-    height:1px;
+
+  .divide_line {
+    flex-grow: 1;
+    height: 1px;
     background: gray;
   }
 }
 
-.divide_icon_box{
+.divide_icon_box {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,37 +75,125 @@
   border-radius: 1rem;
   background-color: black;
   font-size: 1.3rem;
-  color:white;
+  color: white;
 }
 
-.mod_ul{
+.mod_ul {
   padding: 0 0 0 20px;
-  margin:0;
+  margin: 0;
 }
 
-.pj_res_des{
+.pj_res_des {
   padding-left: 2rem;
-  font-size:2px;
-  color:black;
-  color:white;
 }
-// 打印样式
-@media print {
-  @page{
-    size: A4;
-    margin: 0;
+
+.edit_box {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+}
+
+.choose_box {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+
+  .choose_box_item {
+    height: 200px;
+    width: 150px;
+    margin: 1rem;
+    text-align: center;
+    line-height: 200px;
+    background: rgba(200, 200, 200, 0.8);
+    overflow: hidden;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.info_edit_box {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  width: 2rem;
+  right: -3rem;
+  top: 0;
+}
+
+.content_edit_box {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 2rem;
+  right: -3rem;
+  top: 0;
+
+  // text-indent: 5px;
+  span {
+    margin-bottom: 5px;
+  }
+}
+
+
+@media(max-width:1068px) {
+  .edit_box {
+    display: none;
   }
 
-  .layout{
+  .choose_box {
+    display: none;
+  }
+}
+
+// 打印样式
+@media print {
+  @page {
+    size: A4;
+    //padding: 15px 5rem;
+    margin: 15px 0 15px 0;
+  }
+
+  .ant-drawer {
+    display: none !important;
+  }
+
+  .layout {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    .content{
+
+    .content {
       width: 794px;
-      height: 1123px;
+      // height: 1123px;
       background-color: white;
-      padding: 10px 5rem;
+      padding: 0 5rem;
     }
+  }
+
+  .section_box {
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .edit_box {
+    display: none;
+  }
+
+  .choose_box {
+    display: none;
+  }
+
+  .content_edit_box {
+    display: none;
+  }
+
+  .info_edit_box {
+    display: none;
   }
 }

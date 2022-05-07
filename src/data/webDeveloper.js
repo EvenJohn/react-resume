@@ -1,9 +1,9 @@
 /*
-* @module 简历基本信息对象
+* @module 前端简历
 * @Date: 2022/4/23
 * @Author: evenly
 */
-const Info = {
+const Info2 = {
     // 基本信息
     baseInfo: {
         logo: './logo192.png',
@@ -49,19 +49,19 @@ const Info = {
         }]
     },{
         id: '3',
-        name: '在线简历制作工具（个人学习项目）',
+        name: 'xxxxxxxxxxxxxxxxxxxxxxx',
         role: '项目负责人',
-        des: '使用 React + Redux + Ant Design + Less 实现了个人简历制作工具的开发，网页链接',
+        des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',
         responsibilities: [{
-            des: '对简历信息进行简单划分，按不同栏目进行组件化'
+            des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         },{
-            des: '使用 Redux 实现了简历信息对象的集中式状态管理'
+            des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         },{
-            des: '实现了动态增加、修改、删除各栏目信息的功能'
+            des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         },{
-            des: '实现基本的登录注册功能，并将简历信息存储到数据库中'
+            des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         },{
-            des: '使用 react-router-dom 实现基本的路由跳转'
+            des: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
         }]
     }],
     // 教育经历
@@ -104,4 +104,4 @@ const Info = {
     }]
 }
 
-export default Info
+export default Info2
